@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <div class="head">
+        <h3>{{ media_type }}</h3>
+        <i class='bx bx-search' ></i>
+        <i class='bx bx-filter' ></i>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Media</th>
+                <th>Date</th>
+                <th>Duration</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for media in media_list %}
+                <tr>
+                    <td>
+                        <p><a href="{{ url_for('media_inter', media_type=media_type, media_name=media) }}">{{ media }}</p>
+                    </td>
+                    <td>01-10-2021</td>
+                    <td><span class="status completed">Completed</span></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

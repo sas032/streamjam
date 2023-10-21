@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>{{ media_name }}</h1>
+<div class="media-player">
+    <video controls id="video-player" style="width: 100%; height: 300px;">
+        <source src="{{ url_for('media_files', media_type=media_type, media_name=media_name) }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<script>
+    const videoPlayer = document.getElementById('video-player');
+    videoPlayer.addEventListener('play', function () {
+        // Add any additional playback functionality here if needed.
+    });
+</script>
+{% endblock %}

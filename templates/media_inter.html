@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>{{media_type}}</h1>
+    
+    <ul class="box-info">
+        <li>
+            <i class='bx bxs-calendar-check' ></i>
+            <span class="text">
+                <h3><a href="{{ url_for('media_player', media_type=media_type, media_name=media_name) }}">{{media_name}}</a></h3>
+                <p>New Order</p>
+            </span>
+        </li>
+        
+    </ul>
+{% endblock %}
