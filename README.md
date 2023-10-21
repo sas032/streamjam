@@ -26,5 +26,6 @@ Before you get started, ensure you have the following dependencies installed:
    cd streamjam
    python app.py
    ```
+3. Keep your videos and audios in the videos and audios folder present inside media directory.
 2. Go to http://localhost:5000
 
